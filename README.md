@@ -148,4 +148,5 @@ Feedstock Maintainers
 =====================
 
 * [@chklovski](https://github.com/chklovski/)
+* [@wwood](https://github.com/wwood/)
 
