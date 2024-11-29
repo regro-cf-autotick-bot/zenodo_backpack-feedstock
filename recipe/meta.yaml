@@ -10,22 +10,23 @@ source:
   sha256: dc91f3c427f976465789746e94736abfa536cf42dc2e49b6d6067382a9a39b26
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - requests
     - tqdm
 
 test:
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
   imports:
